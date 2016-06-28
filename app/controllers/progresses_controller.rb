@@ -46,6 +46,6 @@ class ProgressesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def progress_params
-      params.fetch(:progress, {})
+      params.fetch(:progress, {}).permit(:note)
     end
 end

@@ -18,6 +18,7 @@ class ResourcesController < ApplicationController
     @resource = Resource.new(resource_params)
 
     if @resource.save
+      @resource.create_progresses!
       render json: @resource, status: :created, location: @resource
     else
       render json: @resource.errors, status: :unprocessable_entity
@@ -46,6 +47,6 @@ class ResourcesController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def resource_params
-      params.fetch(:resource, {})
+      params.fetch(:resource, {}).permit(:name, :url, :description)
     end
 end

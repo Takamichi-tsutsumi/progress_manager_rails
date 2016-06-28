@@ -6,7 +6,7 @@ users = User.create(
      {name: 'Hiro'}]
 )
 
-p "Create users"
+p "Create resources"
 
 Resource.create(
     [{name: 'Udacity'},
