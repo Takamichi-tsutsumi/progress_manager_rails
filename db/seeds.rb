@@ -12,3 +12,4 @@ Resource.create(
     [{name: 'Udacity'},
      {name: 'Udemy'}]
 )
+

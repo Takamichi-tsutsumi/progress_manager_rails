@@ -18,7 +18,6 @@ class ResourcesController < ApplicationController
     @resource = Resource.new(resource_params)
 
     if @resource.save
-      @resource.create_progresses!
       render json: @resource, status: :created, location: @resource
     else
       render json: @resource.errors, status: :unprocessable_entity

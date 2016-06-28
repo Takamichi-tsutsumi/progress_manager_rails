@@ -12,17 +12,5 @@
 
 class Resource < ApplicationRecord
   has_many :progresses
-
-  # create progresses
-  def create_progresses!
-    raise "Record is not saved" if self.new_record?
-
-    progresses = []
-
-    User.all.each do |user|
-      progresses << Progress.new(user: user, resource: self)
-    end
-
-    Progress.import progresses
-  end
+  has_many :users, through: :progresses
 end

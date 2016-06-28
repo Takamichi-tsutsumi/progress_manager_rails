@@ -15,6 +15,13 @@ class Progress < ApplicationRecord
   belongs_to :resource
   belongs_to :user
 
+  STATUS = {
+      0 => 'Not Started',
+      1 => 'In Progress',
+      2 => 'Finished'
+  }
+
+  private
   def next_status
     2 if self.status >= 1
     1 if self.status == 0

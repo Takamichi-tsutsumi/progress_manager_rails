@@ -10,4 +10,5 @@
 
 class User < ApplicationRecord
   has_many :progresses
+  has_many :resources, through: :progresses
 end
