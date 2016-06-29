@@ -18,6 +18,7 @@ gem 'rack-cors'
 # custom gems
 gem 'pry-rails'
 gem 'activerecord-import', '~> 0.11.0'
+gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

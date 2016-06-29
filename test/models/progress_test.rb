@@ -4,7 +4,7 @@
 #
 #  id          :integer          not null, primary key
 #  status      :integer          default(0), not null
-#  note        :text
+#  note        :text(65535)
 #  resource_id :integer
 #  user_id     :integer
 #  created_at  :datetime         not null
